@@ -26,6 +26,7 @@ var server = http.createServer((req, res)=>{
         res.end(JSON.stringify(resObj));
     }
     else{
+        res.writeHead(404)
         res.end("please send me a request with a proper path name!");
     }
 })
